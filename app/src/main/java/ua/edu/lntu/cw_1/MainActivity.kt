@@ -59,3 +59,12 @@ fun My_Screen()
         }
     }
 }
+
+@Composable
+fun SettingItem(painter: Painter, description: String)
+{
+    Row (){
+        Image()
+        Text()
+    }
+}
