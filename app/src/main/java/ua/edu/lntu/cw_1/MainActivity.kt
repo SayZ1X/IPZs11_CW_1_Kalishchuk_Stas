@@ -53,8 +53,28 @@ fun My_Screen()
 {
     val logo = painterResource(R.drawable.android_logo)
     Column (){
-        Column(){
-        }
+        Column(
+            modifier = Modifier. fillMaxWidth(),
+            horizontalAlignment = Alignment.CenterHorizontally
+        ){
+            Box(
+                modifier = Modifier
+                    .background(Color(0xFF4f2dab ))
+                    .size(150.dp)
+                    .padding(12.dp)
+            ){
+                Image(painter = logo, contentDescription = null,
+                    modifier = Modifier
+                        .size(150.dp))
+            }
+            Text("Jennifer Doe",
+                fontSize = 20.sp,
+                fontWeight = FontWeight.ExtraBold
+            )
+            Text("Android Developer Extraordinate",
+                fontSize = 20.sp,
+                fontWeight = FontWeight.ExtraBold
+            )
         Column (
             modifier = Modifier. fillMaxWidth()
                 .padding(top = 100.dp),
