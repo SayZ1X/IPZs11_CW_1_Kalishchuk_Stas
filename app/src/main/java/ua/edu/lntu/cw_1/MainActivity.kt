@@ -63,8 +63,16 @@ fun My_Screen()
 @Composable
 fun SettingItem(painter: Painter, description: String)
 {
-    Row (){
-        Image()
-        Text()
+    Row (
+        horizontalArrangement = Arrangement.Start
+    ){
+        Image(painter = painter, contentDescription = null,
+            modifier = Modifier
+                .size(24.dp))
+
+        Text(text = "$description",
+            fontSize = 20.sp,
+            fontWeight = FontWeight.Medium,
+            color = Color(0xFF3ddc84))
     }
 }
