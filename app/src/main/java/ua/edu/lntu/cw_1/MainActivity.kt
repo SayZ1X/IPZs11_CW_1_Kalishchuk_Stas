@@ -52,29 +52,39 @@ class MainActivity : ComponentActivity() {
 fun My_Screen()
 {
     val logo = painterResource(R.drawable.android_logo)
-    Column (){
+    Column (
+        modifier = Modifier
+            .fillMaxSize()
+            .background(Color(0xFF3aaa84)),
+        verticalArrangement = Arrangement.Center
+    ){
         Column(
             modifier = Modifier. fillMaxWidth(),
             horizontalAlignment = Alignment.CenterHorizontally
-        ){
+        ) {
             Box(
                 modifier = Modifier
-                    .background(Color(0xFF4f2dab ))
+                    .background(Color(0xFF4f2dab))
                     .size(150.dp)
                     .padding(12.dp)
-            ){
-                Image(painter = logo, contentDescription = null,
+            ) {
+                Image(
+                    painter = logo, contentDescription = null,
                     modifier = Modifier
-                        .size(150.dp))
+                        .size(150.dp)
+                )
             }
-            Text("Jennifer Doe",
+            Text(
+                "Jennifer Doe",
                 fontSize = 20.sp,
                 fontWeight = FontWeight.ExtraBold
             )
-            Text("Android Developer Extraordinate",
+            Text(
+                "Android Developer Extraordinate",
                 fontSize = 20.sp,
                 fontWeight = FontWeight.ExtraBold
             )
+        }
         Column (
             modifier = Modifier. fillMaxWidth()
                 .padding(top = 100.dp),
@@ -88,18 +98,21 @@ fun My_Screen()
 }
 
 @Composable
-fun SettingItem(painter: Painter, description: String)
-{
-    Row (
+fun SettingItem(painter: Painter, description: String) {
+    Row(
         horizontalArrangement = Arrangement.Start
-    ){
-        Image(painter = painter, contentDescription = null,
+    ) {
+        Image(
+            painter = painter, contentDescription = null,
             modifier = Modifier
-                .size(24.dp))
+                .size(24.dp)
+        )
 
-        Text(text = "$description",
+        Text(
+            text = "$description",
             fontSize = 20.sp,
             fontWeight = FontWeight.Medium,
-            color = Color(0xFF3ddc84))
+            color = Color(0xFF3ddc84)
+        )
     }
 }
