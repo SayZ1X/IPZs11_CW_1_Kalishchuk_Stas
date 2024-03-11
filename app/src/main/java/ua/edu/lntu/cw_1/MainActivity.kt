@@ -55,7 +55,14 @@ fun My_Screen()
     Column (){
         Column(){
         }
-        Column (){
+        Column (
+            modifier = Modifier. fillMaxWidth()
+                .padding(top = 100.dp),
+            horizontalAlignment = Alignment.CenterHorizontally
+        ){
+            SettingItem(logo, "+00 (00)000 00");
+            SettingItem(logo, "@instagram.com");
+            SettingItem(logo, "mail@gmail.com");
         }
     }
 }
